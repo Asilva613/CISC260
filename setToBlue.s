@@ -15,14 +15,14 @@ _start:
         mov r0,#1
         mov r1,#1
 startLoop:
-        cmp r0,#7
+        cmp r0,#8
         add r0,r0,#1
         
         bgt startLoop2
         b startLoop
         
 startLoop2:
-        cmp r1,#7
+        cmp r1,#8
         add r1,r1,#1
         
         #get the color blue 
