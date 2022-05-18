@@ -8,9 +8,9 @@ _start:
         blt _start_exit
 
         #get the color purple and store it in r6
-        mov r0,#31
+        mov r0,#15
         mov r1,#0
-        mov r2,#31
+        mov r2,#15
         bl getColor
         mov r6,r0
 
@@ -138,6 +138,18 @@ _start:
         mov r2,r6
         mov r0,#4
         mov r1,#1
+        bl setPixel
+        
+        #set pixel 0,1 to the blue color stored in r6
+        mov r2,r6
+        mov r0,#0
+        mov r1,#1
+        bl setPixel
+        
+        #set pixel 0,2 to the blue color stored in r6
+        mov r2,r6
+        mov r0,#0
+        mov r1,#2
         bl setPixel
         
         
