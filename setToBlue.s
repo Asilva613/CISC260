@@ -11,6 +11,14 @@ _start:
         cmp r0,#0
         blt _start_exit
         
+        
+        #get the color blue 
+        mov r3,#0
+        mov r4,#0
+        mov r5,#31
+        bl getColor
+        mov r6,r0
+        
      
         mov r0,#1
         mov r1,#1
@@ -25,11 +33,11 @@ startLoop2:
         cmp r1,#8
         add r1,r1,#1
         
-        #get the color blue 
-        mov r3,#0
-        mov r4,#0
-        mov r5,#31
-        bl getColor
+        #set pixel to the blue color stored in r6
+        mov r0,r0
+        mov r1,r1
+        mov r6,r6
+        bl setPixel
         
         bgt _start_exit
         b startLoop2
