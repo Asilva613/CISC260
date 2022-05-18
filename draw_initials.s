@@ -8,7 +8,7 @@ _start:
         blt _start_exit
 
         #get the color blue and store it in r6
-        mov r0,#0
+        mov r0,#31
         mov r1,#0
         mov r2,#31
         bl getColor
