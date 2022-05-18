@@ -134,6 +134,12 @@ _start:
         mov r1,#2
         bl setPixel
         
+        #set pixel 4,1 to the blue color stored in r6
+        mov r2,r6
+        mov r0,#4
+        mov r1,#1
+        bl setPixel
+        
         
         
         #second initial
