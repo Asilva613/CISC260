@@ -11,7 +11,7 @@ _start:
     blt _start_exit
     
     
-    #get the color blue and store it in r6
+    #get the color blue and store it in r10
     mov r0,#0
     mov r1,#0
     mov r2,#31
