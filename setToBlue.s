@@ -31,11 +31,10 @@ startLoop2:
         mov r5,#31
         bl getColor
         
-        bgt exit
+        bgt _start_exit
         b startLoop2
         
         
-exit:
         #cleanup the data structures created by openfb and close the framebuffer device
         bl closefb
          
