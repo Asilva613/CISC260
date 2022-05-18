@@ -14,7 +14,7 @@ _start:
         bl getColor
         mov r6,r0
 
-        #first intital
+        #first intital "m"
         #set pixel 0,0 to the blue color stored in r6
         mov r2,r6
         mov r0,#0
@@ -154,7 +154,7 @@ _start:
         
         
         
-        #second initial
+        #second initial "a"
         #set pixel 0,4 to the blue color stored in r6
         mov r2,r6
         mov r0,#0
