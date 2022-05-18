@@ -13,16 +13,28 @@ _start:
         
         
         mov r0,#1
-loop:
+        mov r1,#1
+startLoop:
         cmp r0,#7
         add r0,r0,#1
-        B loop
-        endLoop
+        
+        bgt startLoop2
+        b startLoop
+        
+startLoop2:
+        cmp r1,#7
+        add r1,r1,#1
         
         
         
+        bgt exit
+        b startLoop2
+        
+        
+exit:
         #cleanup the data structures created by openfb and close the framebuffer device
         bl closefb
+         
 
 _start_exit:
         #clean exit
